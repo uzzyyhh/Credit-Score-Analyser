@@ -1,88 +1,105 @@
 # 📈 Stock ML Pipeline
 
-Welcome to **Stock ML Pipeline**, an interactive Streamlit web application that enables users to perform end-to-end financial stock analysis using real-time or uploaded data. From data loading and preprocessing to model training and results visualization — this app is a complete machine learning pipeline tailored for stock market enthusiasts, data scientists, and finance professionals.
+A sleek and interactive Streamlit app that guides users through a full machine learning pipeline tailored for stock market data. From data loading to visualization, this app combines modern UI with powerful modeling capabilities and real-time financial data via **Yahoo Finance**.
+
+![Stock ML Pipeline](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDNpeG53czA0Zm1veXM5OHpma250aTZpNDRzNWZxN3Yydzllc3BwdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jBh6MxLLsH9ZNfYLY9/giphy.gif)
 
 ---
 
 ## 🚀 Features
 
-- **Modern UI**: Custom dark theme with a classy financial look.
-- **Data Loading**:
-  - Upload your own dataset (CSV or Excel).
-  - Fetch real-time stock data from Yahoo Finance using `yfinance`.
-- **Preprocessing**:
-  - Automatic detection of numerical/categorical features.
-  - Cleaning and imputation.
-  - Feature engineering.
-- **Machine Learning**:
-  - Linear Regression
-  - Logistic Regression
-  - KMeans Clustering
-- **Model Evaluation**:
-  - Metrics: RMSE, R² Score
-  - Visualizations with Plotly
-- **Stock Insights**:
-  - Real-time price retrieval
-  - Historical trends & volume analysis
-- **Robust Retry Logic** for API data fetching using `tenacity`.
+- 📥 **Data Loading**  
+  - Upload your own CSV/Excel data  
+  - Or fetch historical data from Yahoo Finance (via `yfinance`)
+
+- 🧹 **Preprocessing Pipeline**  
+  - Auto-detection and conversion of numeric columns  
+  - Missing value handling with `SimpleImputer`  
+  - Feature scaling with `StandardScaler`
+
+- ⚙️ **Modeling**  
+  - Linear Regression, Logistic Regression, and KMeans Clustering  
+  - Model training, evaluation, and prediction
+
+- 📊 **Visualization**  
+  - Interactive plots via Plotly (line charts, scatter plots, clusters)  
+  - Custom metrics and styled output
+
+- 🎨 **Theming**  
+  - Finance-inspired dark UI with hover effects and styled components
 
 ---
 
-## 🛠️ Tech Stack
+## 📂 Installation
 
-- [Python](https://www.python.org/)
-- [Streamlit](https://streamlit.io/)
-- [Pandas](https://pandas.pydata.org/)
-- [NumPy](https://numpy.org/)
-- [Plotly](https://plotly.com/)
-- [Scikit-learn](https://scikit-learn.org/)
-- [yfinance](https://github.com/ranaroussi/yfinance)
-- [tenacity](https://tenacity.readthedocs.io/)
-
----
-
-## 📷 Interface Preview
-
-![Stock Market App GIF](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDNpeG53czA0Zm1veXM5OHpma250aTZpNDRzNWZxN3Yydzllc3BwdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jBh6MxLLsH9ZNfYLY9/giphy.gif)
-
----
-
-## ▶️ Getting Started
-
-### 1. Clone the Repo
+1. Clone the repository:
 
 ```
 git clone https://github.com/uzzyyhh/stock-ml-pipeline.git
 cd stock-ml-pipeline
-2. Install Dependencies
+Install required packages:
+
 pip install -r requirements.txt
-3. Run the App
+Run the Streamlit app:
 streamlit run app.py
-📂 File Structure
-bash
-Copy
-Edit
-├── app.py                # Main Streamlit application
-├── README.md             # Project overview
-├── requirements.txt      # Dependencies
-└── data/                 # (Optional) Place your sample datasets here
+
+📦 Dependencies
+streamlit
+
+pandas
+
+numpy
+
+plotly
+
+scikit-learn
+
+yfinance
+
+tenacity
+
+Install everything using:
+pip install streamlit pandas numpy plotly scikit-learn yfinance tenacity
+
+🧠 How It Works
+The app follows a step-by-step pipeline:
+
+Welcome Page – Introduction + stock market themed GIF
+
+Data Load – Upload or fetch from Yahoo Finance
+
+Preprocessing – Clean, impute, and scale data
+
+Modeling – Choose models and train
+
+Evaluation & Visualization – Analyze results and visualize with Plotly
+
+📈 Example Tickers
+If using Yahoo Finance, try:
+
+AAPL – Apple Inc.
+
+TSLA – Tesla, Inc.
+
+MSFT – Microsoft Corporation
+
+🛡️ Caching & Resilience
+Yahoo Finance requests are cached using @st.cache_data
+
+Auto-retry mechanism using tenacity for handling rate limits and request errors
+
 💡 Future Enhancements
 Add deep learning models (LSTM, GRU)
 
-Support for sentiment analysis from financial news
+Support for technical indicators (MACD, RSI)
 
-Integration with financial APIs (Alpha Vantage, Finnhub)
+Dashboard export (PDF, Excel)
 
-Model comparison dashboard
+API integration for crypto and forex
 
-🧑‍💻 Contributing
-Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change or improve.
+📃 License
+MIT License
 
-📝 License
-MIT
-
-📬 Contact
-For feedback or collaboration:
-
-📧 Email: i229831@nu.edu.pk
-
+👨‍💻 Author
+Made with ❤️ by Usman Nadeem
+Feel free to contribute or fork the repo!
